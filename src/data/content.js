@@ -12,7 +12,7 @@ export const profile = {
   location: "Kigali, Rwanda",
   email: "etiennetuyihamye@gmail.com",
   github: "https://github.com/etienne0114",
-  linkedin: "https://www.linkedin.com/in/etienne-tuyihamye",
+  linkedin: "https://www.linkedin.com/in/etienne-tuyihamye-864565417",
   resumeUrl: "/resume.html",
 };
 
