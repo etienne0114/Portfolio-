@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Etienne Tuyihamye — Résumé</title>
+<style>
+  :root { --accent: #0e7490; --muted: #475569; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #111827;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    line-height: 1.5;
+    font-size: 14.5px;
+  }
+  .print-hint {
+    font-family: Arial, sans-serif;
+    background: #ecfeff;
+    border: 1px solid #a5f3fc;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  .print-hint button {
+    font-family: inherit; font-size: 13px; margin-left: 10px;
+    padding: 4px 14px; cursor: pointer;
+    background: var(--accent); color: #fff; border: none; border-radius: 6px;
+  }
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 14px; margin-bottom: 20px; }
+  h1 { font-size: 26px; letter-spacing: 0.5px; }
+  .subtitle { color: var(--accent); font-weight: bold; margin: 2px 0 6px; }
+  .contacts { color: var(--muted); font-size: 13px; }
+  .contacts a { color: var(--muted); }
+  h2 {
+    font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--accent); margin: 22px 0 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 3px;
+  }
+  .item { margin-bottom: 12px; }
+  .item-head { display: flex; justify-content: space-between; flex-wrap: wrap; }
+  .item-head strong { font-size: 14.5px; }
+  .item-head span { color: var(--muted); font-size: 13px; font-style: italic; }
+  .item .org { color: var(--muted); font-size: 13.5px; }
+  ul { padding-left: 18px; margin-top: 4px; }
+  li { margin-bottom: 3px; }
+  .skills-row { margin-bottom: 4px; }
+  .skills-row b { color: #0f172a; }
+  @media print { .print-hint { display: none; } body { padding: 24px 8px; } }
+</style>
+</head>
+<body>
+  <div class="print-hint">
+    To save as PDF: press <b>Ctrl/Cmd + P</b> and choose "Save as PDF".
+    <button onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <header>
+    <h1>ETIENNE TUYIHAMYE</h1>
+    <div class="subtitle">Software Engineer · AI Engineer · Backend Developer</div>
+    <div class="contacts">
+      Kigali, Rwanda ·
+      <a href="mailto:etiennetuyihamye@gmail.com">etiennetuyihamye@gmail.com</a> ·
+      <a href="https://github.com/etienne0114">github.com/etienne0114</a> ·
+      <a href="https://www.linkedin.com/in/etienne-tuyihamye">linkedin.com/in/etienne-tuyihamye</a>
+    </div>
+  </header>
+
+  <h2>Profile</h2>
+  <p>
+    Fourth-year Information Systems student and systems-minded engineer who builds scalable,
+    production-ready software across backend, AI, mobile and embedded domains. Learns from first
+    principles, designs before coding, and ships complete products — from distributed C++ runtimes
+    to REST APIs and IoT controllers. Long-term goal: build globally competitive technology
+    products from Africa.
+  </p>
+
+  <h2>Education</h2>
+  <div class="item">
+    <div class="item-head">
+      <strong>BSc in Information Systems — University of Rwanda, School of ICT</strong>
+      <span>4th year, in progress</span>
+    </div>
+    <div class="org">Software Engineering, Databases, Computer Networks, AI, Operating Systems, Web Technologies, Systems Analysis &amp; Design, Software Project Management</div>
+  </div>
+  <div class="item">
+    <div class="item-head">
+      <strong>A-Level: Mathematics, Computer Science &amp; Economics (MCE) — GS Muhura</strong>
+      <span>Completed</span>
+    </div>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="item">
+    <div class="item-head">
+      <strong>Industrial Attachment — IoT Engineer</strong>
+      <span>STEM Power · UR College of Science and Technology</span>
+    </div>
+    <ul>
+      <li>Designed and built an IoT-Based Automatic Smart Phase Load Balancer: monitors electrical load across three power phases and redistributes loads automatically when imbalance occurs.</li>
+      <li>Integrated microcontrollers, current sensors, relay control and LCD displays; wrote embedded control logic with safe-switching guarantees.</li>
+      <li>Delivered testing, documentation and demonstrations, improving energy efficiency and reducing overload risk.</li>
+    </ul>
+  </div>
+
+  <h2>Key Projects</h2>
+  <div class="item">
+    <div class="item-head"><strong>VGRE — Virtual GPU Runtime Engine</strong><span>C++, LLVM, distributed systems</span></div>
+    <ul>
+      <li>Platform that executes CUDA/PTX workloads on CPU clusters, democratizing access to GPU-class computing.</li>
+      <li>Built PTX interpreter + LLVM JIT, master–worker TCP/UDP clustering with HMAC and post-quantum (ML-KEM-768) secure channels, and PyTorch/JAX/TensorFlow support via StableHLO.</li>
+      <li>Runs quantized 8B-parameter LLMs (GGUF int4/int8); SIMD GEMM kernels at 82× naive baseline; 300-test suite kept green; Flutter monitoring dashboard.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><strong>VibeOn — Social Super App</strong><span>Flutter, Node.js, PostgreSQL, Redis</span></div>
+    <ul>
+      <li>African-built platform unifying messaging, video, education, AI assistants, marketplaces and creator monetization; architected for horizontal scaling with Express.js, Prisma, Supabase and Docker.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><strong>VibeOn Translator API</strong><span>Python, FastAPI, NLLB — live</span></div>
+    <ul>
+      <li>Offline multilingual translation REST API with automatic language detection across hundreds of languages, independent of online translation services. Deployed on Hugging Face Spaces: <a href="https://etienne0114-vibeon-translator.hf.space">etienne0114-vibeon-translator.hf.space</a></li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><strong>Urungano — Immersive Health Education</strong><span>Web, Firebase — live</span></div>
+    <ul>
+      <li>Multilingual sexual and reproductive health education platform for young people in Rwanda and beyond. Live at <a href="https://urungano-60a69.web.app/">urungano-60a69.web.app</a></li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><strong>AI Recruitment Screening Platform</strong><span>Next.js, AI — live</span></div>
+    <ul>
+      <li>Intelligent AI-assisted candidate screening platform built for the Umurava hackathon and deployed on Vercel: <a href="https://umurava-hackthon.vercel.app/">umurava-hackthon.vercel.app</a></li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="item-head"><strong>Imboni — Civic Reporting Platform</strong><span>Flutter, REST, PostgreSQL</span></div>
+    <ul>
+      <li>Connects citizens with public institutions through structured, trackable issue reporting.</li>
+    </ul>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skills-row"><b>Languages:</b> Python, JavaScript, TypeScript, Dart, C++, PHP, HTML, CSS</div>
+  <div class="skills-row"><b>Backend:</b> FastAPI, Flask, Django, Node.js/Express, REST API design, authentication &amp; RBAC</div>
+  <div class="skills-row"><b>Frontend/Mobile:</b> Flutter, React</div>
+  <div class="skills-row"><b>Data:</b> PostgreSQL, SQLite, Redis, Prisma ORM, Supabase, DuckDB</div>
+  <div class="skills-row"><b>AI/ML:</b> LLMs, RAG, AI agents, NLLB translation, PyTorch, model quantization</div>
+  <div class="skills-row"><b>DevOps &amp; Systems:</b> Docker, Git/GitHub, Linux, CI/CD, TCP/UDP networking, CMake</div>
+  <div class="skills-row"><b>IoT/Embedded:</b> Arduino, ESP32/ESP8266, GSM/GPS modules, sensors, relays, embedded C/C++</div>
+
+  <h2>Research Interests</h2>
+  <p>Distributed systems, GPU virtualization &amp; HPC, applied AI and multilingual NLP, cloud-native architecture, cybersecurity and post-quantum cryptography, digital transformation for small businesses.</p>
+</body>
+</html>
