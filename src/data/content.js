@@ -8,9 +8,13 @@ export const profile = {
     "Tech Entrepreneur",
   ],
   tagline:
-    "I design and build scalable, production-ready systems — from distributed backends and AI services to embedded IoT devices — with a vision of creating globally competitive technology from Africa.",
+    "I design and build scalable, production-ready systems from distributed backends and AI services to embedded IoT devices with a vision of creating globally competitive technology from Africa.",
   location: "Kigali, Rwanda",
   email: "etiennetuyihamye@gmail.com",
+  phones: [
+    { label: "+250 782 556 011", whatsapp: "https://wa.me/250782556011" },
+    { label: "+250 724 007 524", whatsapp: "https://wa.me/250724007524" },
+  ],
   github: "https://github.com/etienne0114",
   linkedin: "https://www.linkedin.com/in/etienne-tuyihamye-864565417",
   resumeUrl: "/resume.html",
@@ -18,9 +22,9 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I am a fourth-year Information Systems student at the University of Rwanda, School of ICT, and an aspiring Software Engineer, AI Engineer and Technology Entrepreneur. I believe technology should improve people's lives, empower businesses and create opportunities — particularly across Africa.",
+    "I am a fourth-year Information Systems student at the University of Rwanda, School of ICT, and an aspiring Software Engineer, AI Engineer and Technology Entrepreneur. I believe technology should improve people's lives, empower businesses and create opportunities particularly across Africa.",
     "I am driven by curiosity. Rather than learning only how to use frameworks, I study the principles underneath them: how HTTP really works, how databases store and index data, how distributed systems stay consistent, how authentication protocols protect users, how compilers and runtimes execute code. Starting from fundamentals is how I move from tutorials to production-ready engineering.",
-    "I believe great products begin with strong system design, not with writing code immediately. I enjoy understanding how modules communicate, how APIs interact, and how simple architectures evolve into enterprise-grade platforms. That systems-thinking mindset shapes every project I build — from social platforms and translation APIs to GPU runtimes and embedded controllers.",
+    "I believe great products begin with strong system design, not with writing code immediately. I enjoy understanding how modules communicate, how APIs interact, and how simple architectures evolve into enterprise-grade platforms. That systems-thinking mindset shapes every project I build from social platforms and translation APIs to GPU runtimes and embedded controllers.",
   ],
   education: [
     {
@@ -115,7 +119,7 @@ export const projects = [
     ],
     stack: ["Flutter", "Node.js", "Express.js", "PostgreSQL", "Redis", "Supabase", "Prisma ORM", "Docker"],
     architecture:
-      "Modular service architecture: secure authentication, real-time messaging and calls, short/long-form video, recommendation systems, business pages, digital marketplace, notifications and an admin dashboard — designed for horizontal scaling from day one.",
+      "Modular service architecture: secure authentication, real-time messaging and calls, short/long-form video, recommendation systems, business pages, digital marketplace, notifications and an admin dashboard designed for horizontal scaling from day one.",
     challenges: [
       "Designing a schema and service boundaries that survive feature growth",
       "Real-time messaging and presence at scale",
@@ -130,7 +134,7 @@ export const projects = [
     status: "Live · Hugging Face Spaces",
     live: "https://etienne0114-vibeon-translator.hf.space",
     summary:
-      "An offline multilingual translation REST API powered by Meta's NLLB model — automatic language detection and translation across hundreds of languages with no dependency on online services.",
+      "An offline multilingual translation REST API powered by Meta's NLLB model automatic language detection and translation across hundreds of languages with no dependency on online services.",
     objectives: [
       "Reliable translation for low-connectivity environments",
       "Automatic source-language detection",
@@ -166,7 +170,7 @@ export const projects = [
       "Designing engaging, immersive learning for low-bandwidth users",
     ],
     outcomes:
-      "Live and publicly accessible — a working example of technology addressing a real public-health education gap for Rwandan youth.",
+      "Live and publicly accessible a working example of technology addressing a real public-health education gap for Rwandan youth.",
   },
   {
     name: "AI Recruitment Screening Platform",
@@ -174,7 +178,7 @@ export const projects = [
     status: "Live · Vercel",
     live: "https://umurava-hackthon.vercel.app/",
     summary:
-      "An intelligent recruitment screening platform built for the Umurava hackathon — AI-assisted candidate screening that helps employers evaluate applicants faster and more fairly.",
+      "An intelligent recruitment screening platform built for the Umurava hackathon AI-assisted candidate screening that helps employers evaluate applicants faster and more fairly.",
     objectives: [
       "Automate first-pass candidate screening with AI",
       "Give employers structured, comparable applicant insights",
@@ -182,7 +186,7 @@ export const projects = [
     ],
     stack: ["Next.js", "React", "TypeScript", "AI screening", "Vercel"],
     architecture:
-      "A Next.js application with job listing and application flows, AI-powered screening of candidate submissions, and employer-facing review dashboards — deployed on Vercel.",
+      "A Next.js application with job listing and application flows, AI-powered screening of candidate submissions, and employer-facing review dashboards deployed on Vercel.",
     challenges: [
       "Designing AI evaluation that is useful without being a black box",
       "Building and deploying a complete product within a hackathon timeline",
@@ -195,7 +199,7 @@ export const projects = [
     tag: "IoT / Embedded",
     status: "Completed · Industrial attachment",
     summary:
-      "An automatic three-phase electrical load balancer built during my industrial attachment at STEM Power (UR – College of Science and Technology): it monitors loads across power phases and redistributes them when imbalance occurs.",
+      "An automatic three-phase electrical load balancer built during my industrial attachment at STEM Power (UR  College of Science and Technology): it monitors loads across power phases and redistributes them when imbalance occurs.",
     objectives: [
       "Continuously monitor current across three power phases",
       "Automatically redistribute loads to prevent overload",
@@ -205,7 +209,7 @@ export const projects = [
     architecture:
       "Sensor array feeding a microcontroller control loop that computes phase imbalance and switches relay banks to rebalance loads, with live status on an LCD panel.",
     challenges: [
-      "Safe switching logic — never disconnect a load without a destination phase",
+      "Safe switching logic never disconnect a load without a destination phase",
       "Calibrating sensors against real electrical noise",
       "Testing against genuine imbalance scenarios",
     ],
@@ -288,7 +292,7 @@ export const blogPosts = [
   {
     title: "Running CUDA without a GPU: lessons from building VGRE",
     excerpt:
-      "What I learned implementing a PTX interpreter and LLVM JIT to execute GPU workloads on plain CPUs — and why fundamentals beat frameworks.",
+      "What I learned implementing a PTX interpreter and LLVM JIT to execute GPU workloads on plain CPUs and why fundamentals beat frameworks.",
     tag: "Systems",
     date: "Coming soon",
   },
@@ -302,7 +306,7 @@ export const blogPosts = [
   {
     title: "From imbalanced phases to balanced loads: my first real IoT system",
     excerpt:
-      "Building an automatic three-phase load balancer at STEM Power — sensors, relays and the safety logic in between.",
+      "Building an automatic three-phase load balancer at STEM Power sensors, relays and the safety logic in between.",
     tag: "IoT",
     date: "Coming soon",
   },

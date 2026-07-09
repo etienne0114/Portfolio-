@@ -17,6 +17,15 @@ export default function Footer() {
           </a>
           {" · "}
           <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          {" · "}
+          {profile.phones.map((p, i) => (
+            <span key={p.label}>
+              {i > 0 && " | "}
+              <a href={p.whatsapp} target="_blank" rel="noreferrer">
+                {p.label}
+              </a>
+            </span>
+          ))}
         </span>
       </div>
     </footer>

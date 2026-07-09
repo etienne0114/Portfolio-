@@ -34,13 +34,12 @@ function CaseStudy({ p }) {
   );
 }
 
-function ProjectCard({ p, index }) {
-  const [open, setOpen] = useState(index === 0);
+function ProjectCard({ p }) {
+  const [open, setOpen] = useState(false);
 
   return (
-    <Reveal>
-      <div className="card">
-        <div className="project-top">
+    <div className="card">
+      <div className="project-top">
           <h3>{p.name}</h3>
           <span className="badge badge-tag">{p.tag}</span>
           <span className="badge badge-status">{p.status}</span>
@@ -75,8 +74,7 @@ function ProjectCard({ p, index }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-    </Reveal>
+    </div>
   );
 }
 
@@ -95,9 +93,17 @@ export default function Projects() {
           </p>
         </Reveal>
         <div className="projects-list">
-          {projects.map((p, i) => (
-            <ProjectCard key={p.name} p={p} index={i} />
-          ))}
+          {[projects.slice(0, Math.ceil(projects.length / 2)), projects.slice(Math.ceil(projects.length / 2))].map(
+            (column, ci) => (
+              <div className="projects-col" key={ci}>
+                {column.map((p, i) => (
+                  <Reveal key={p.name} delay={i * 0.08}>
+                    <ProjectCard p={p} />
+                  </Reveal>
+                ))}
+              </div>
+            )
+          )}
         </div>
         <Reveal>
           <h3 className="subheading">Concepts & R&D</h3>
