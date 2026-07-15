@@ -22,15 +22,15 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I am a fourth-year Information Systems student at the University of Rwanda, School of ICT, and an aspiring Software Engineer, AI Engineer and Technology Entrepreneur. I believe technology should improve people's lives, empower businesses and create opportunities particularly across Africa.",
+    "I hold a Bachelor's degree in Information Systems from the University of Rwanda, School of ICT, and I am a Software Engineer, AI Engineer and Technology Entrepreneur. I believe technology should improve people's lives, empower businesses and create opportunities particularly across Africa.",
     "I am driven by curiosity. Rather than learning only how to use frameworks, I study the principles underneath them: how HTTP really works, how databases store and index data, how distributed systems stay consistent, how authentication protocols protect users, how compilers and runtimes execute code. Starting from fundamentals is how I move from tutorials to production-ready engineering.",
     "I believe great products begin with strong system design, not with writing code immediately. I enjoy understanding how modules communicate, how APIs interact, and how simple architectures evolve into enterprise-grade platforms. That systems-thinking mindset shapes every project I build from social platforms and translation APIs to GPU runtimes and embedded controllers.",
   ],
   education: [
     {
       school: "University of Rwanda — School of ICT",
-      credential: "BSc in Information Systems (4th year)",
-      period: "Current",
+      credential: "Bachelor of Science in Information Systems",
+      period: "Graduated",
       detail:
         "Software Engineering, Systems Analysis & Design, Database Systems, Computer Networks, Artificial Intelligence, Operating Systems, Web Technologies, IS Management, Software Project Management.",
     },

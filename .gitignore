@@ -6,3 +6,10 @@ dist
 *.log
 .vercel
 .jetro
+.agents
+.cursor
+.github
+.mcp.json
+AGENT.md
+CLAUDE.md
+.windsurfrules

@@ -4,51 +4,163 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Etienne Tuyihamye — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
-  :root { --accent: #0e7490; --muted: #475569; }
+  :root {
+    --accent: #d98e0f;
+    --accent-dark: #b06f04;
+    --ink: #16181d;
+    --muted: #5b6270;
+    --line: #e6e2d8;
+    --sidebar-bg: #faf7f0;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body {
-    font-family: Georgia, "Times New Roman", serif;
-    color: #111827;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 48px 32px;
-    line-height: 1.5;
-    font-size: 14.5px;
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--ink);
+    background: #ececec;
+    line-height: 1.55;
+    font-size: 13.5px;
   }
   .print-hint {
-    font-family: Arial, sans-serif;
-    background: #ecfeff;
-    border: 1px solid #a5f3fc;
-    border-radius: 8px;
+    max-width: 860px;
+    margin: 18px auto 0;
+    background: #fff8ea;
+    border: 1px solid #f0dcae;
+    border-radius: 10px;
     padding: 10px 16px;
     font-size: 13px;
-    margin-bottom: 28px;
   }
   .print-hint button {
     font-family: inherit; font-size: 13px; margin-left: 10px;
-    padding: 4px 14px; cursor: pointer;
-    background: var(--accent); color: #fff; border: none; border-radius: 6px;
+    padding: 5px 16px; cursor: pointer; font-weight: 600;
+    background: var(--accent); color: #fff; border: none; border-radius: 999px;
   }
-  header { border-bottom: 2px solid var(--accent); padding-bottom: 14px; margin-bottom: 20px; }
-  h1 { font-size: 26px; letter-spacing: 0.5px; }
-  .subtitle { color: var(--accent); font-weight: bold; margin: 2px 0 6px; }
-  .contacts { color: var(--muted); font-size: 13px; }
-  .contacts a { color: var(--muted); }
+  .page {
+    max-width: 860px;
+    margin: 18px auto 40px;
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  /* ---------- header ---------- */
+  header {
+    background: #16181d;
+    color: #f5f5f0;
+    padding: 34px 42px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .photo {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    flex-shrink: 0;
+  }
+  h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  h1 .dot { color: var(--accent); }
+  .subtitle {
+    color: var(--accent);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 4px 0 10px;
+    letter-spacing: 0.3px;
+  }
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    color: #b9bdc7;
+    font-size: 12px;
+  }
+  .contacts a { color: #b9bdc7; text-decoration: none; }
+  .contacts b { color: #e8e9ec; font-weight: 500; }
+
+  /* ---------- layout ---------- */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 265px;
+  }
+  main { padding: 26px 34px 34px 42px; }
+  aside {
+    background: var(--sidebar-bg);
+    border-left: 1px solid var(--line);
+    padding: 26px 26px 34px;
+  }
+
   h2 {
-    font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px;
-    color: var(--accent); margin: 22px 0 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 3px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-dark);
+    margin: 22px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  .item { margin-bottom: 12px; }
-  .item-head { display: flex; justify-content: space-between; flex-wrap: wrap; }
-  .item-head strong { font-size: 14.5px; }
-  .item-head span { color: var(--muted); font-size: 13px; font-style: italic; }
-  .item .org { color: var(--muted); font-size: 13.5px; }
-  ul { padding-left: 18px; margin-top: 4px; }
-  li { margin-bottom: 3px; }
-  .skills-row { margin-bottom: 4px; }
-  .skills-row b { color: #0f172a; }
-  @media print { .print-hint { display: none; } body { padding: 24px 8px; } }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h2:first-child { margin-top: 0; }
+
+  .item { margin-bottom: 14px; }
+  .item:last-child { margin-bottom: 0; }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 2px 12px; }
+  .item-head strong { font-size: 13.5px; font-weight: 600; }
+  .item-head span { color: var(--muted); font-size: 11.5px; }
+  .item .org { color: var(--accent-dark); font-size: 12px; font-weight: 500; margin-bottom: 2px; }
+  ul { padding-left: 16px; margin-top: 4px; }
+  li { margin-bottom: 3px; color: #333945; }
+  li::marker { color: var(--accent); }
+  p { color: #333945; }
+  a { color: var(--accent-dark); }
+
+  /* ---------- sidebar ---------- */
+  aside h2::after { background: #e5ddc9; }
+  .skill-group { margin-bottom: 10px; }
+  .skill-group b {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .skill-group span { color: var(--muted); font-size: 12px; }
+  .edu { margin-bottom: 12px; }
+  .edu strong { font-size: 12.5px; display: block; }
+  .edu .cred { color: var(--accent-dark); font-size: 12px; font-weight: 500; }
+  .edu .when { color: var(--muted); font-size: 11.5px; }
+  .interests { color: var(--muted); font-size: 12px; }
+
+  /* ---------- print ---------- */
+  @media print {
+    body { background: #fff; font-size: 12.5px; }
+    .print-hint { display: none; }
+    .page { margin: 0; max-width: none; box-shadow: none; }
+    header { padding: 26px 36px; }
+    main { padding: 20px 28px 28px 36px; }
+    aside { padding: 20px 22px; }
+    a { text-decoration: none; }
+    @page { size: A4; margin: 0; }
+  }
+  @media (max-width: 720px) {
+    .body-grid { grid-template-columns: 1fr; }
+    aside { border-left: none; border-top: 1px solid var(--line); }
+    header { flex-direction: column; text-align: center; }
+    .contacts { justify-content: center; }
+  }
 </style>
 </head>
 <body>
@@ -57,104 +169,129 @@
     <button onclick="window.print()">Print / Save PDF</button>
   </div>
 
-  <header>
-    <h1>ETIENNE TUYIHAMYE</h1>
-    <div class="subtitle">Software Engineer · AI Engineer · Backend Developer</div>
-    <div class="contacts">
-      Kigali, Rwanda ·
-      <a href="mailto:etiennetuyihamye@gmail.com">etiennetuyihamye@gmail.com</a> ·
-      <a href="https://github.com/etienne0114">github.com/etienne0114</a> ·
-      <a href="https://www.linkedin.com/in/etienne-tuyihamye">linkedin.com/in/etienne-tuyihamye</a>
+  <div class="page">
+    <header>
+      <img class="photo" src="/me.jpg" alt="Etienne Tuyihamye" />
+      <div>
+        <h1>ETIENNE TUYIHAMYE<span class="dot">.</span></h1>
+        <div class="subtitle">Software Engineer · AI Engineer · Backend Developer</div>
+        <div class="contacts">
+          <span><b>Kigali, Rwanda</b></span>
+          <a href="mailto:etiennetuyihamye@gmail.com">etiennetuyihamye@gmail.com</a>
+          <a href="https://wa.me/250782556011">+250 782 556 011</a>
+          <a href="https://wa.me/250724007524">+250 724 007 524</a>
+          <a href="https://github.com/etienne0114">github.com/etienne0114</a>
+          <a href="https://www.linkedin.com/in/etienne-tuyihamye-864565417">linkedin.com/in/etienne-tuyihamye</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="body-grid">
+      <main>
+        <h2>Profile</h2>
+        <p>
+          Software Engineer with a Bachelor's degree in Information Systems and a systems-first
+          mindset: I build scalable, production-ready software across backend, AI, mobile and
+          embedded domains. I learn from first principles, design before coding, and ship complete
+          products — from distributed C++ runtimes to REST APIs and IoT controllers. Long-term
+          goal: build globally competitive technology products from Africa.
+        </p>
+
+        <h2>Experience</h2>
+        <div class="item">
+          <div class="item-head">
+            <strong>Industrial Attachment — IoT Engineer</strong>
+            <span>STEM Power · UR College of Science and Technology</span>
+          </div>
+          <ul>
+            <li>Designed and built an IoT-Based Automatic Smart Phase Load Balancer: monitors electrical load across three power phases and redistributes loads automatically when imbalance occurs.</li>
+            <li>Integrated microcontrollers, current sensors, relay control and LCD displays; wrote embedded control logic with safe-switching guarantees.</li>
+            <li>Delivered testing, documentation and demonstrations, improving energy efficiency and reducing overload risk.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <strong>Independent Builder — Systems &amp; AI</strong>
+            <span>VGRE · VibeOn · Imboni · Ongoing</span>
+          </div>
+          <ul>
+            <li>Building a distributed virtual-GPU runtime in C++ with secure clustering and ML framework support.</li>
+            <li>Architecting a social super app and an offline AI translation API with production-ready patterns.</li>
+            <li>Maintaining large test suites, CI pipelines and technical documentation across projects.</li>
+          </ul>
+        </div>
+
+        <h2>Key Projects</h2>
+        <div class="item">
+          <div class="item-head"><strong>VGRE — Virtual GPU Runtime Engine</strong><span>C++ · LLVM · distributed systems</span></div>
+          <ul>
+            <li>Executes CUDA/PTX workloads on CPU clusters, democratizing access to GPU-class computing.</li>
+            <li>PTX interpreter + LLVM JIT, master–worker TCP/UDP clustering with HMAC and post-quantum (ML-KEM-768) secure channels; PyTorch/JAX/TensorFlow support via StableHLO.</li>
+            <li>Runs quantized 8B-parameter LLMs (GGUF int4/int8); SIMD GEMM kernels at 82× naive baseline; 300-test suite; Flutter monitoring dashboard.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><strong>VibeOn — Social Super App</strong><span>Flutter · Node.js · PostgreSQL · Redis</span></div>
+          <ul>
+            <li>African-built platform unifying messaging, video, education, AI assistants, marketplaces and creator monetization; architected for horizontal scaling with Express.js, Prisma, Supabase and Docker.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><strong>VibeOn Translator API</strong><span>Python · FastAPI · NLLB — live</span></div>
+          <ul>
+            <li>Offline multilingual translation REST API with automatic language detection across hundreds of languages. Live: <a href="https://etienne0114-vibeon-translator.hf.space">etienne0114-vibeon-translator.hf.space</a></li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><strong>Urungano — Immersive Health Education</strong><span>Web · Firebase — live</span></div>
+          <ul>
+            <li>Multilingual sexual and reproductive health education platform for young people. Live: <a href="https://urungano-60a69.web.app/">urungano-60a69.web.app</a></li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><strong>AI Recruitment Screening Platform</strong><span>Next.js · AI — live</span></div>
+          <ul>
+            <li>AI-assisted candidate screening built for the Umurava hackathon. Live: <a href="https://umurava-hackthon.vercel.app/">umurava-hackthon.vercel.app</a></li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><strong>Imboni — Civic Reporting Platform</strong><span>Flutter · REST · PostgreSQL</span></div>
+          <ul>
+            <li>Connects citizens with public institutions through structured, trackable issue reporting.</li>
+          </ul>
+        </div>
+      </main>
+
+      <aside>
+        <h2>Education</h2>
+        <div class="edu">
+          <strong>University of Rwanda — School of ICT</strong>
+          <div class="cred">Bachelor of Science in Information Systems</div>
+          <div class="when">Graduated</div>
+        </div>
+        <div class="edu">
+          <strong>GS Muhura</strong>
+          <div class="cred">A-Level: Mathematics, Computer Science &amp; Economics (MCE)</div>
+          <div class="when">Completed</div>
+        </div>
+
+        <h2>Technical Skills</h2>
+        <div class="skill-group"><b>Languages</b><span>Python, JavaScript, TypeScript, Dart, C++, PHP, HTML, CSS</span></div>
+        <div class="skill-group"><b>Backend</b><span>FastAPI, Flask, Django, Node.js/Express, REST design, auth &amp; RBAC, WebSockets</span></div>
+        <div class="skill-group"><b>Frontend / Mobile</b><span>Flutter, React, responsive UI</span></div>
+        <div class="skill-group"><b>Data</b><span>PostgreSQL, SQLite, Redis, Prisma ORM, Supabase, DuckDB</span></div>
+        <div class="skill-group"><b>AI / ML</b><span>LLMs, RAG, AI agents, NLLB translation, PyTorch, model quantization</span></div>
+        <div class="skill-group"><b>DevOps &amp; Systems</b><span>Docker, Git/GitHub, Linux, CI/CD, TCP/UDP networking, CMake</span></div>
+        <div class="skill-group"><b>IoT / Embedded</b><span>Arduino, ESP32/ESP8266, GSM/GPS, sensors, relays, embedded C/C++</span></div>
+
+        <h2>Research Interests</h2>
+        <p class="interests">
+          Distributed systems · GPU virtualization &amp; HPC · applied AI and multilingual NLP ·
+          cloud-native architecture · cybersecurity &amp; post-quantum cryptography · digital
+          transformation for small businesses.
+        </p>
+      </aside>
     </div>
-  </header>
-
-  <h2>Profile</h2>
-  <p>
-    Fourth-year Information Systems student and systems-minded engineer who builds scalable,
-    production-ready software across backend, AI, mobile and embedded domains. Learns from first
-    principles, designs before coding, and ships complete products from distributed C++ runtimes
-    to REST APIs and IoT controllers. Long-term goal: build globally competitive technology
-    products from Africa.
-  </p>
-
-  <h2>Education</h2>
-  <div class="item">
-    <div class="item-head">
-      <strong>BSc in Information Systems — University of Rwanda, School of ICT</strong>
-      <span>4th year, in progress</span>
-    </div>
-    <div class="org">Software Engineering, Databases, Computer Networks, AI, Operating Systems, Web Technologies, Systems Analysis &amp; Design, Software Project Management</div>
   </div>
-  <div class="item">
-    <div class="item-head">
-      <strong>A-Level: Mathematics, Computer Science &amp; Economics (MCE) — GS Muhura</strong>
-      <span>Completed</span>
-    </div>
-  </div>
-
-  <h2>Experience</h2>
-  <div class="item">
-    <div class="item-head">
-      <strong>Industrial Attachment — IoT Engineer</strong>
-      <span>STEM Power · UR College of Science and Technology</span>
-    </div>
-    <ul>
-      <li>Designed and built an IoT-Based Automatic Smart Phase Load Balancer: monitors electrical load across three power phases and redistributes loads automatically when imbalance occurs.</li>
-      <li>Integrated microcontrollers, current sensors, relay control and LCD displays; wrote embedded control logic with safe-switching guarantees.</li>
-      <li>Delivered testing, documentation and demonstrations, improving energy efficiency and reducing overload risk.</li>
-    </ul>
-  </div>
-
-  <h2>Key Projects</h2>
-  <div class="item">
-    <div class="item-head"><strong>VGRE — Virtual GPU Runtime Engine</strong><span>C++, LLVM, distributed systems</span></div>
-    <ul>
-      <li>Platform that executes CUDA/PTX workloads on CPU clusters, democratizing access to GPU-class computing.</li>
-      <li>Built PTX interpreter + LLVM JIT, master–worker TCP/UDP clustering with HMAC and post-quantum (ML-KEM-768) secure channels, and PyTorch/JAX/TensorFlow support via StableHLO.</li>
-      <li>Runs quantized 8B-parameter LLMs (GGUF int4/int8); SIMD GEMM kernels at 82× naive baseline; 300-test suite kept green; Flutter monitoring dashboard.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="item-head"><strong>VibeOn — Social Super App</strong><span>Flutter, Node.js, PostgreSQL, Redis</span></div>
-    <ul>
-      <li>African-built platform unifying messaging, video, education, AI assistants, marketplaces and creator monetization; architected for horizontal scaling with Express.js, Prisma, Supabase and Docker.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="item-head"><strong>VibeOn Translator API</strong><span>Python, FastAPI, NLLB — live</span></div>
-    <ul>
-      <li>Offline multilingual translation REST API with automatic language detection across hundreds of languages, independent of online translation services. Deployed on Hugging Face Spaces: <a href="https://etienne0114-vibeon-translator.hf.space">etienne0114-vibeon-translator.hf.space</a></li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="item-head"><strong>Urungano — Immersive Health Education</strong><span>Web, Firebase — live</span></div>
-    <ul>
-      <li>Multilingual sexual and reproductive health education platform for young people in Rwanda and beyond. Live at <a href="https://urungano-60a69.web.app/">urungano-60a69.web.app</a></li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="item-head"><strong>AI Recruitment Screening Platform</strong><span>Next.js, AI — live</span></div>
-    <ul>
-      <li>Intelligent AI-assisted candidate screening platform built for the Umurava hackathon and deployed on Vercel: <a href="https://umurava-hackthon.vercel.app/">umurava-hackthon.vercel.app</a></li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="item-head"><strong>Imboni — Civic Reporting Platform</strong><span>Flutter, REST, PostgreSQL</span></div>
-    <ul>
-      <li>Connects citizens with public institutions through structured, trackable issue reporting.</li>
-    </ul>
-  </div>
-
-  <h2>Technical Skills</h2>
-  <div class="skills-row"><b>Languages:</b> Python, JavaScript, TypeScript, Dart, C++, PHP, HTML, CSS</div>
-  <div class="skills-row"><b>Backend:</b> FastAPI, Flask, Django, Node.js/Express, REST API design, authentication &amp; RBAC</div>
-  <div class="skills-row"><b>Frontend/Mobile:</b> Flutter, React</div>
-  <div class="skills-row"><b>Data:</b> PostgreSQL, SQLite, Redis, Prisma ORM, Supabase, DuckDB</div>
-  <div class="skills-row"><b>AI/ML:</b> LLMs, RAG, AI agents, NLLB translation, PyTorch, model quantization</div>
-  <div class="skills-row"><b>DevOps &amp; Systems:</b> Docker, Git/GitHub, Linux, CI/CD, TCP/UDP networking, CMake</div>
-  <div class="skills-row"><b>IoT/Embedded:</b> Arduino, ESP32/ESP8266, GSM/GPS modules, sensors, relays, embedded C/C++</div>
-
-  <h2>Research Interests</h2>
-  <p>Distributed systems, GPU virtualization &amp; HPC, applied AI and multilingual NLP, cloud-native architecture, cybersecurity and post-quantum cryptography, digital transformation for small businesses.</p>
 </body>
 </html>
